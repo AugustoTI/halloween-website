@@ -1,0 +1,130 @@
+.home {
+  position: relative;
+
+  .shape__small {
+    top: -3rem;
+    left: -3rem;
+  }
+
+  .shape__big {
+    bottom: -5rem;
+    right: -10rem;
+  }
+
+  .home_container {
+    padding-top: 3.5rem;
+  }
+
+  .home_data {
+    text-align: center;
+  }
+
+  .home_title {
+    position: relative;
+    font-size: $biggest-font-size;
+    line-height: 140%;
+    width: max-content;
+    margin: 0 auto 0.5rem;
+
+    span {
+      display: block;
+      font-family: $second-font;
+      font-weight: initial;
+      color: $first-color;
+    }
+
+    .home_title-img-1,
+    .home_title-img-2 {
+      width: 40px;
+      position: absolute;
+    }
+
+    .home_title-img-1 {
+      top: -1rem;
+      left: -1.5rem;
+      transform: rotate(-15deg);
+      animation: animate-star-1 5s infinite ease-in-out;
+    }
+
+    .home_title-img-2 {
+      bottom: 2.75rem;
+      right: -1.5rem;
+      transform: rotate(15deg);
+      animation: animate-star-2 5s infinite ease-in-out;
+    }
+  }
+
+  .home_description {
+    margin-bottom: 2.5rem;
+  }
+
+  .home_image {
+    width: 300px;
+    justify-self: center;
+    margin-top: 1.5rem;
+  }
+
+  .home_tree-1,
+  .home_tree-2 {
+    width: 120px;
+    position: absolute;
+    top: 18rem;
+  }
+
+  .home_tree-1 {
+    left: -2rem;
+  }
+
+  .home_tree-2 {
+    right: -2rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: $white-color;
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: $first-color;
+  font-weight: $font-semi-bold;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $first-color;
+    color: $white-color;
+  }
+}
+
+@keyframes animate-star-1 {
+  0% {
+    transform: scale(0.7) rotate(-15deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1) rotate(-15deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.7) rotate(-15deg);
+    opacity: 0.2;
+  }
+}
+
+@keyframes animate-star-2 {
+  0% {
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.7) rotate(15deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+}
