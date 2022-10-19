@@ -55,3 +55,18 @@
   height: 250px;
   opacity: 0.8;
 }
+
+.button {
+  display: inline-block;
+  background-color: $white-color;
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: $first-color;
+  font-weight: $font-semi-bold;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $first-color;
+    color: $white-color;
+  }
+}
