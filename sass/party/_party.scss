@@ -1,0 +1,47 @@
+.party {
+  position: relative;
+
+  .party_container {
+    row-gap: 5rem;
+
+    .section__title {
+      margin-bottom: 1rem;
+    }
+
+    .party_data {
+      text-align: center;
+    }
+
+    .party_description {
+      margin-bottom: 2rem;
+    }
+
+    .party_images {
+      position: relative;
+      justify-self: center;
+    }
+
+    .party_image {
+      width: 250px;
+    }
+
+    .party_star-1,
+    .party_star-2 {
+      width: 50px;
+      position: absolute;
+      transform: rotate(15deg);
+    }
+
+    .party_star-1 {
+      top: -3rem;
+      left: -0.5rem;
+      animation: animate-star-1 5s infinite ease-in-out;
+    }
+
+    .party_star-2 {
+      right: -1.5rem;
+      bottom: 2rem;
+      animation: animate-star-2 5s infinite ease-in-out;
+    }
+  }
+}
