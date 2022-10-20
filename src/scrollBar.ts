@@ -1,3 +1,5 @@
+import ScrollReveal from 'scrollreveal'
+
 const sections = document.querySelectorAll<HTMLElement>('section[id]')
 
 const scrollActive = () => {
@@ -31,4 +33,21 @@ const scrollUp = () => {
 
 window.addEventListener('scroll', scrollUp)
 
-export {}
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true,
+})
+
+sr.reveal(`.home_data, .footer_content, .footer_logo, .footer_description`)
+sr.reveal(`.home_tree-1`, { origin: 'left', delay: 800 })
+sr.reveal(`.home_tree-2`, { origin: 'right', delay: 800 })
+sr.reveal(`.home_image`, { delay: 800 })
+
+sr.reveal(`.category_card, .items_card`, { interval: 100 })
+
+sr.reveal(`.about_image, .about_data, .footer_tree-2`, { origin: 'left' })
+
+sr.reveal(`.party_images, .party_data, .footer_tree-1`, { origin: 'right' })
