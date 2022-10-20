@@ -21,16 +21,16 @@
 
   .home_title {
     position: relative;
-    font-size: $biggest-font-size;
+    font-size: var(--biggest-font-size);
     line-height: 140%;
     width: max-content;
     margin: 0 auto 0.5rem;
 
     span {
       display: block;
-      font-family: $second-font;
+      font-family: var(--second-font);
       font-weight: initial;
-      color: $first-color;
+      color: var(--first-color);
     }
 
     .home_title-img-1,
@@ -77,5 +77,78 @@
 
   .home_tree-2 {
     right: -2rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .home {
+    .home_title {
+      font-size: 1.5rem;
+    }
+
+    .home_tree-1 {
+      left: -4rem;
+    }
+
+    .home_tree-2 {
+      right: -4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .home {
+    .home_container {
+      grid-template-columns: 0.6fr;
+      justify-content: center;
+    }
+
+    .home_tree-1,
+    .home_tree-2 {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    .home_title {
+      .home_title-img-1,
+      .home_title-img-2 {
+        width: 60px;
+      }
+
+      .home_title-img-2 {
+        bottom: 5.75rem;
+      }
+    }
+
+    .home_description {
+      padding: 0 7.5rem;
+    }
+
+    .home_tree-1,
+    .home_tree-2 {
+      width: 300px;
+      top: 14rem;
+    }
+
+    .home_image {
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .home {
+    .home_tree-1,
+    .home_tree-2 {
+      width: 450px;
+    }
+
+    .home_image {
+      width: 600px;
+      margin-top: 3rem;
+    }
   }
 }

@@ -13,11 +13,11 @@
 }
 
 .section__title {
-  font-size: $h1-font-size;
-  font-family: $second-font;
+  font-size: var(--h1-font-size);
+  font-family: var(--second-font);
   font-weight: initial;
   line-height: 130%;
-  color: $first-color;
+  color: var(--first-color);
   text-align: center;
   margin-bottom: 2.5rem;
 }
@@ -39,7 +39,7 @@
 .shape__small,
 .shape__big {
   position: absolute;
-  background-color: $first-color;
+  background-color: var(--first-color);
   filter: blur(96px);
   z-index: -1;
   border-radius: 50%;
@@ -58,15 +58,55 @@
 
 .button {
   display: inline-block;
-  background-color: $white-color;
+  background-color: var(--white-color);
   padding: 1rem 1.5rem;
   border-radius: 4rem;
-  color: $first-color;
-  font-weight: $font-semi-bold;
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
   transition: background 0.3s, color 0.3s;
 
   &:hover {
-    background-color: $first-color;
-    color: $white-color;
+    background-color: var(--first-color);
+    color: var(--white-color);
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .section {
+    padding-block: 7rem 1.5rem;
+  }
+
+  .section__title {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shape__small,
+  .shape__big {
+    filter: blur(132px);
+    opacity: 0.5;
+  }
+
+  .shape__small {
+    width: 350px;
+    height: 350px;
+  }
+
+  .shape__big {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1072px) {
+  .container {
+    margin-inline: auto;
   }
 }

@@ -32,3 +32,45 @@
     justify-self: center;
   }
 }
+
+@media screen and (min-width: 576px) {
+  .about {
+    .about_container {
+      grid-template-columns: 0.6fr;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    .shape__big {
+      bottom: -12rem;
+    }
+
+    .about_container {
+      padding-top: 2rem;
+      grid-template-columns: max-content 0.9fr;
+      column-gap: 7rem;
+      align-items: center;
+    }
+
+    .about_image {
+      order: -1;
+      width: 500px;
+    }
+
+    .about_data {
+      text-align: initial;
+    }
+
+    .about_container .section__title {
+      text-align: initial;
+      margin-bottom: 1.5rem;
+    }
+
+    .about_description {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

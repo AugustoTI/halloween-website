@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  font-size: $normal-font-size;
-  font-family: $body-font;
-  background-color: $body-color;
-  color: $white-color;
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--white-color);
 }
 
 ul {

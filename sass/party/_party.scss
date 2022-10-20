@@ -45,3 +45,65 @@
     }
   }
 }
+
+@media screen and (max-width: 340px) {
+  .party {
+    .party_container {
+      .party_image {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .party {
+    .party_container {
+      grid-template-columns: 0.6fr;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .party {
+    .party_container {
+      padding-top: 5rem;
+      grid-template-columns: 0.7fr max-content;
+      column-gap: 8rem;
+      align-items: center;
+
+      .section__title {
+        text-align: initial;
+        margin-bottom: 1.5rem;
+      }
+
+      .party_data {
+        text-align: initial;
+      }
+
+      .party_description {
+        margin-bottom: 2.5rem;
+      }
+
+      .party_image {
+        width: 400px;
+      }
+
+      .party_star-1,
+      .party_star-2 {
+        width: 100px;
+      }
+
+      .party_star-1 {
+        top: -5rem;
+        left: -5rem;
+      }
+
+      .party_star-2 {
+        right: -3rem;
+        bottom: 3rem;
+      }
+    }
+  }
+}

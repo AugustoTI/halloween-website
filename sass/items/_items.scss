@@ -15,7 +15,7 @@
 
   .items_card {
     position: relative;
-    background-color: $container-color;
+    background-color: var(--container-color);
     border-radius: 1.5rem;
     padding: 4rem 1.25rem 1.25rem;
     box-shadow: 0 4px 16px hsla(22, 10%, 2%, 0.3);
@@ -35,22 +35,22 @@
     }
 
     .items_name {
-      font-size: $normal-font-size;
-      font-weight: $font-medium;
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-medium);
       margin-bottom: 0.25rem;
     }
 
     .items_price {
       display: block;
-      font-weight: $font-semi-bold;
-      color: $first-color;
+      font-weight: var(--font-semi-bold);
+      color: var(--first-color);
       margin-bottom: 0.5rem;
     }
 
     .items_button {
       display: inline-flex;
-      background-color: $first-color;
-      color: $white-color;
+      background-color: var(--first-color);
+      color: var(--white-color);
       padding: 0.25rem 1.5rem;
       border-radius: 4rem;
       cursor: pointer;
@@ -63,7 +63,52 @@
       }
 
       &:hover {
-        background-color: $first-color-alt;
+        background-color: var(--first-color-alt);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .items {
+    .items_container {
+      grid-template-columns: 180px;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .items {
+    .items_container {
+      grid-template-columns: repeat(2, 200px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .items {
+    .shape__big {
+      bottom: -12rem;
+    }
+
+    .items_container {
+      grid-template-columns: repeat(3, 200px);
+      gap: 6rem 3.5rem;
+    }
+
+    .items_card {
+      padding: 6rem 1rem 1.5rem;
+
+      .items_image {
+        width: 130px;
+      }
+
+      .items_name {
+        font-size: var(--h3-font-size);
+      }
+
+      .items_button i {
+        font-size: 1.5rem;
       }
     }
   }
